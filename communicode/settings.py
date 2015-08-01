@@ -30,15 +30,22 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+
 INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sites',
     'django.contrib.staticfiles',
-)
 
+    'debug_toolbar',
+    'registration',
+
+    'communicode.dashboard',
+    'communicode.users',
+)
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -55,7 +62,6 @@ ROOT_URLCONF = 'communicode.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -65,6 +71,9 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
             ],
         },
+        'DIRS': [
+            os.path.join(BASE_DIR,  'templates'),
+        ],
     },
 ]
 
@@ -101,7 +110,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR,  'templates'),
-)
-
+GITLAB_HOST = os.environ['GITLAB_HOST']
+GITLAB_USERNAME = 'root'
+GITLAB_PASSWORD = os.environ['GITLAB_PASSWORD']
