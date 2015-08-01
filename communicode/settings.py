@@ -111,5 +111,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 GITLAB_HOST = os.environ['GITLAB_HOST']
-GITLAB_USERNAME = 'root'
-GITLAB_PASSWORD = os.environ['GITLAB_PASSWORD']
+GITLAB_TOKEN = os.environ['GITLAB_TOKEN']

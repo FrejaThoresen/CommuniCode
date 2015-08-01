@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-HI!
-<button>New project</button>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for project in projects %}
+    Project name: {{ project.name }}<br>
+    {% endfor %}
+{% endblock %}
