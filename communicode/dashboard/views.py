@@ -7,6 +7,8 @@ class DashboardView(TemplateView):
     def get_context_data(self, **kwargs):
         context_data = super(DashboardView, self).get_context_data(**kwargs)
         context_data['projects'] = wrappers.get_projects()
+        context_data['branches'] = wrappers.get_branches()
+
         # import ipdb; ipdb.set_trace()
         return context_data
 

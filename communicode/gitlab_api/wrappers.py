@@ -6,3 +6,6 @@ def get_projects():
 
 def create_project(name):
     return git.createproject(name=name)
+
+def get_branches():
+    return git.getbranches(1)
