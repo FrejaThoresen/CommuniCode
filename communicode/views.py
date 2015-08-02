@@ -27,3 +27,19 @@ class ProjectCodeView(TemplateView):
         return context
 
 project_code_view = ProjectCodeView.as_view()
+
+
+class ProjectTreeView(TemplateView):
+    template_name = 'projectTree.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(ProjectTreeView, self).get_context_data(**kwargs)
+        project_id = kwargs.get('project_id')
+        project = wrappers.get_project(int(project_id))
+        if not project:
+            raise Http404
+        context['project'] = project
+        context['last_commit'] = wrappers.get_commit(project_id, 'master')
+        return context
+
+project_tree_view = ProjectTreeView.as_view()

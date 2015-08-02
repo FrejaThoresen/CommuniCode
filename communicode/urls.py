@@ -22,6 +22,7 @@ from communicode.accounts.views import custom_registration_view
 urlpatterns = [
     url(r'^$', 'communicode.views.dashboard_view', name='dashboard'),
     url(r'^project/(?P<project_id>\d+)/', 'communicode.views.project_code_view', name='project_code'),
+    url(r'^tree/(?P<project_id>\d+)/', 'communicode.views.project_tree_view', name='project_tree'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^accounts/login/$', auth_views.login, name='login'),
     url(r'^accounts/logout/$', auth_views.logout, {'next_page': '/'}, name='logout'),

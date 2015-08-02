@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block stylesheets %}
+    {{ block.super }}
+    <link href="{% static 'css/gitgraph.css' %}" rel="stylesheet"/>
+    <link rel="stylesheet" href="{% static 'css/jquery.fileupload.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.fileupload-ui.css' %}">
+{% endblock %}
+
+{% block content %}
+			<div class="col-lg-9 col-md-9" style="padding-right:0px;">
+			
+			<div class="thumbnail" style="margin-bottom:0px; padding-left:30px; padding-right:30px; background-color:transparent; border:none;">
+			<div class="page-header" style="margin-top:0px;">
+						<h3>
+							Project Tree
+						</h3>
+					</div>
+				</div>
+
+					
+				
+			<div class="col-md-12">
+
+			 <span id="commit" onclick="branch()" class="btn btn-success fileinput-button">
+                    <i class="glyphicon glyphicon-plus"></i>
+                    <span>branch</span>
+                    <input type="file" name="files[]" multiple>
+                </span>
+			<button 	id="commit" class="btn btn-primary gardient4" onclick="commit()" style="border:none;" role="button" href="#"> commit </button>
+			<button 	id="commit" class="btn btn-primary gardient4" onclick="merge()" style="border:none;" role="button" href="#"> merge </button>
+			
+			<canvas id="gitGraph"></canvas>
+					  
+			</div>
+
+	
+			</div>
+			<div class="col-lg-3 col-md-3 gardient" style="padding-left:0px; border-radius:5px;">
+				
+				
+				<div class="thumbnail" style="margin-left:15px; margin-top:0px; background-color:transparent; border:none;">
+				<div class="page-header" style="margin-top:0px; margin-bottom:0px;">
+						<h3 style="color:#fff;">
+							About CommuniCode
+						</h3>
+					</div>
+				</div>
+				
+				<div class="thumbnail" style="margin-left:15px; margin-top:15px; background-color:#fff;  border:none;">
+					Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever.
+				</div>
+				
+				<div class="thumbnail" style="margin-left:15px; margin-top:15px; background-color:transparent; border:none;">
+				<div class="page-header" style="margin-top:0px; margin-bottom:0px;">
+						<h3 style="color:#fff;">
+							Contributors
+						</h3>
+					</div>
+				</div>
+				
+				<div class="col-md-12" style="background-color:transparent; margin-bottom:5px;">
+					<button class="btn btn-primary" style="background-color:transparent;" type="button">
+						Messages <span class="badge">22</span>
+					</button>
+				</div>
+				<div class="col-md-12" style="background-color:transparent; margin-bottom:5px;">
+					<button class="btn btn-primary" style="background-color:transparent;" type="button">
+						Messages <span class="badge">4</span>
+					</button>
+				</div>
+				<div class="col-md-12" style="background-color:transparent; margin-bottom:5px;">
+					<button class="btn btn-primary" style="background-color:transparent;" type="button">
+						Messages <span class="badge">1</span>
+					</button>
+				</div>
+				<div class="col-md-12" style="background-color:transparent; margin-bottom:5px;">
+					<button class="btn btn-primary" style="background-color:transparent;" type="button">
+						Messages <span class="badge">42</span>
+					</button>
+				</div>
+				
+			</div>
+{% endblock %}
+
+{% block scripts %}
+    {{ block.super }}
+	<script src="{% static 'js/gitgraph.js' %}"></script>
+	<script src="{% static 'js/index.js' %}"></script>
+{% endblock %}
