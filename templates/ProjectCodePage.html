@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<title>CommuniCode Project Code Version</title>
+
+		<!-- Bootstrap -->
+		<link href="/home/thomas/Downloads/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+		<link href="./gardient.css" rel="stylesheet"/>
+		<!-- Set up to use Import
+		<link rel="import" href="./Collapsible_comments/Collapsible_comments.html">
+		<link rel="import" href="./Collapsible_comments/Collapsible_comments.css">
+		-->
+	</head>
+
+	<body>
+	<nav class="navbar navbar-default gardientInverse" style="	  border:none;">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">
+					<img alt="Brand" src="./Logos/CCLogo-300x300.png" style="width:50px; height:50px; margin-top:-15px;">
+				</a>
+				<a class="navbar-brand" href="#" style=" color:#fff; font-weight:bold; font-size: 24px; font-family: monospace;">
+					CommuniCode
+				</a>
+			</div>
+
+			<form class="navbar-form navbar-left" role="search">
+				<button class="btn btn-default dropdown-toggle" aria-expanded="true" aria-haspopup="true" role="button" data-toggle="dropdown" href="#">
+					Categories
+					<span class="caret"></span>
+				</button>
+				<div class="form-group">
+					<input class="form-control" type="text" placeholder="Search for Projects"></input>
+				</div>
+				<button class="btn btn-default" type="submit">
+					Submit
+				</button>
+			</form>
+
+			<ul class="nav navbar-nav navbar-right" style="padding-top:7px; margin-right:20px;">
+				<li>
+					<button class="btn btn-danger">
+						Sign Up!
+					</button>
+					<button class="btn btn-warning">
+						Sign In!
+					</button>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<h1>$PROJECT_NAME</h1>
+
+	<!-- Main Grid -->
+	<div class="row">
+	<div class="col-md-8">
+		<!-- Grid 2 Begins -->
+		<div class="row">
+			<div class="col-md-9">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						#{Category} – #{Language} – #{Tags}
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-2">
+				<button type="button" class="btn btn-primary">Search Similar</button>
+			</div>
+
+			<div class="col-md-1 centered">
+				<button type="button" class="btn btn-primary">Like</button>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class = "col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						CODE SECTION
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class = "col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						COMMENT SECTION
+					</div>
+				</div>
+
+				<!--
+
+				<div class="container">
+					<div class="row">
+							<div class="col-md-5">
+									<div class="panel panel-primary">
+											<div class="panel-heading" id="accordion">
+													<span class="glyphicon glyphicon-comment"></span> Chat
+													<div class="btn-group pull-right">
+															<a type="button" class="btn btn-default btn-xs" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+																	<span class="glyphicon glyphicon-chevron-down"></span>
+															</a>
+													</div>
+											</div>
+									<div class="panel-collapse collapse" id="collapseOne">
+											<div class="panel-body">
+													<ul class="chat">
+															<li class="left clearfix"><span class="chat-img pull-left">
+																	<img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+															</span>
+																	<div class="chat-body clearfix">
+																			<div class="header">
+																					<strong class="primary-font">Jack Sparrow</strong> <small class="pull-right text-muted">
+																							<span class="glyphicon glyphicon-time"></span>12 mins ago</small>
+																			</div>
+																			<p>
+																					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+																					dolor, quis ullamcorper ligula sodales.
+																			</p>
+																	</div>
+															</li>
+															<li class="right clearfix"><span class="chat-img pull-right">
+																	<img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+															</span>
+																	<div class="chat-body clearfix">
+																			<div class="header">
+																					<small class=" text-muted"><span class="glyphicon glyphicon-time"></span>13 mins ago</small>
+																					<strong class="pull-right primary-font">Bhaumik Patel</strong>
+																			</div>
+																			<p>
+																					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+																					dolor, quis ullamcorper ligula sodales.
+																			</p>
+																	</div>
+															</li>
+															<li class="left clearfix"><span class="chat-img pull-left">
+																	<img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+															</span>
+																	<div class="chat-body clearfix">
+																			<div class="header">
+																					<strong class="primary-font">Jack Sparrow</strong> <small class="pull-right text-muted">
+																							<span class="glyphicon glyphicon-time"></span>14 mins ago</small>
+																			</div>
+																			<p>
+																					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+																					dolor, quis ullamcorper ligula sodales.
+																			</p>
+																	</div>
+															</li>
+															<li class="right clearfix"><span class="chat-img pull-right">
+																	<img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+															</span>
+																	<div class="chat-body clearfix">
+																			<div class="header">
+																					<small class=" text-muted"><span class="glyphicon glyphicon-time"></span>15 mins ago</small>
+																					<strong class="pull-right primary-font">Bhaumik Patel</strong>
+																			</div>
+																			<p>
+																					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+																					dolor, quis ullamcorper ligula sodales.
+																			</p>
+																	</div>
+															</li>
+													</ul>
+											</div>
+											<div class="panel-footer">
+													<div class="input-group">
+															<input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." />
+															<span class="input-group-btn">
+																	<button class="btn btn-warning btn-sm" id="btn-chat">
+																			Send</button>
+															</span>
+													</div>
+											</div>
+									</div>
+									</div>
+							</div>
+					</div>
+			</div>
+
+			-->
+
+			</div>
+		</div>
+		<!-- Grid 2 Ends -->
+	</div>
+
+	<div class="col-md-4">
+		<!-- Grid 3 Begins -->
+		<div class="row">
+			<div class="panel panel-default">
+				<div class="panel-heading">Project Description</div>
+				<div class="panel-body">Panel content</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="panel panel-default">
+				<div class="panel-heading">Version Description</div>
+				<div class="panel-body">Panel content</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="panel panel-default">
+				<div class="panel-heading">Project Versions</div>
+				<div class="panel-body">Panel content</div>
+			</div>
+		</div>
+		<!-- Grid 3 Ends -->
+	</div>
+</div>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
