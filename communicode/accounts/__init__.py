@@ -1,1 +1,1 @@
-__author__ = 'plizonczyk'
+from signals import *

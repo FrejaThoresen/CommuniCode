@@ -24,6 +24,7 @@ urlpatterns = [
     url(r'^project/(?P<project_id>\d+)/', 'communicode.views.project_code_view', name='project_code'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^accounts/login/$', auth_views.login, name='login'),
+    url(r'^accounts/logout/$', auth_views.logout, {'next_page': '/'}, name='logout'),
     url(r'^accounts/register/$', custom_registration_view, name='register'),
 ]
 urlpatterns += staticfiles_urlpatterns()

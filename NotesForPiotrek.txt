@@ -1,9 +1,0 @@
-Notes For Piotrek:
-
-+ Added CSS Files:
-ProjectAndTutorialPageSpecific.css // Used on Project Page and Tutorial Page to format the comment box and typeable text box
-
-buttonsAndPanels.css // Should be loaded in all files. Replaces btn-primary colours and changes the panel-default heading colour
-
-+ Notes:
-Dashboard bar is currently hardcoded into ProjectCodePage.html and TutorialPage.html.
