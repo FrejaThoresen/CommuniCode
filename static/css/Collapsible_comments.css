@@ -46,3 +46,16 @@
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
     background-color: #555;
 }
+
+textarea
+{
+  border:1px solid #999999;
+  width:100%;
+  margin:5px 0;
+  padding:3px;
+}
+
+.boxsizingBorder 
+{
+-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;
+}
