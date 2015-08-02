@@ -42,7 +42,6 @@ INSTALLED_APPS = (
     'debug_toolbar',
     'registration',
 
-    'communicode.dashboard',
     'communicode.users',
     'communicode.accounts',
 )

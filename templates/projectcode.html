@@ -1,57 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-		<title>CommuniCode Project Code</title>
+{% extends 'base.html'%}
 
-		<!-- Bootstrap -->
-		<link href="./../static/css/bootstrap.min.css" rel="stylesheet">
-		<link href="./../static/css/gardient.css" rel="stylesheet"/>
-		<link href="./../static/css/Collapsible_comments.css" rel="stylesheet"/>
-	</head>
-
-	<body>
-	<nav class="navbar navbar-default prettygardient" style="	  border:none;">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#">
-					<img alt="Brand" src="./../static/images/logos/CCLogo-300x300.png" style="width:50px; height:50px; margin-top:-15px;">
-				</a>
-				<a class="navbar-brand" href="#" style=" color:#fff; font-weight:bold; font-size: 24px; font-family: monospace;">
-					CommuniCode
-				</a>
-			</div>
-
-			<form class="navbar-form navbar-left" role="search">
-				<button class="btn btn-default dropdown-toggle" aria-expanded="true" aria-haspopup="true" role="button" data-toggle="dropdown" href="#">
-					Categories
-					<span class="caret"></span>
-				</button>
-				<div class="form-group">
-					<input class="form-control" type="text" placeholder="Search for Projects"></input>
-				</div>
-				<button class="btn btn-default" type="submit">
-					Submit
-				</button>
-			</form>
-
-			<ul class="nav navbar-nav navbar-right" style="padding-top:7px; margin-right:20px;">
-				<li>
-					<button class="btn btn-danger">
-						Sign Up!
-					</button>
-					<button class="btn btn-warning">
-						Sign In!
-					</button>
-				</li>
-			</ul>
-		</div>
-	</nav>
-
-	<h1>$PROJECT_NAME</h1>
+{% block content %}
+	<h1>{{ project.name }}</h1>
 
 	<!-- Main Grid -->
 	<div class="row">
@@ -59,9 +9,9 @@
 		<!-- Grid 2 Begins -->
 		<div class="row">
 			<div class="col-md-9">
-				#{Category} – #{Language} – #{Tags}
+				{# TODO: Model for those things #}#{Category} – #{Language} – #{Tags}
 			</div>
-			
+
 			<div class="col-md-2">
 				<button type="button" class="btn btn-primary">Search Similar</button>
 			</div>
@@ -82,6 +32,7 @@
 						<!-- Text Edit Window Start-->
 						<div class="wmd-container">
 							<div id="wmd-button-bar" class="wmd-button-bar"></div>
+                            {# TODO: getrepositorytree #}
 								<textarea id="wmd-input" class="wmd-input processed" data-min-length="" tabindex="101" rows="15" cols="92" name="post-text"></textarea>
 							<div class="grippie" style="margin-right: 0px;"></div>
 						</div>
@@ -93,13 +44,13 @@
 
 		<div class="row">
 			<div class = "col-md-12">
-				
+
 				<div class="panel panel-default">
 					<div class="panel-body">
 						COMMENT SECTION
 					</div>
 				</div>
-				
+
 
 				<!-- Drop Down Comments Box -->
 <div class="container">
@@ -207,14 +158,14 @@
 		<div class="row">
 			<div class="panel panel-default">
 				<div class="panel-heading">Project Description</div>
-				<div class="panel-body">Panel content</div>
+				<div class="panel-body">{% if project.description %}{{ project.description }}{% endif %}</div>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="panel panel-default">
 				<div class="panel-heading">Version Description</div>
-				<div class="panel-body">Panel content</div>
+				<div class="panel-body">{{ last_commit.title }} by {{ last_commit.author_name }}</div>
 			</div>
 		</div>
 		<div class="row">
@@ -226,23 +177,4 @@
 		<!-- Grid 3 Ends -->
 	</div>
 </div>
-
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<!--
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		-->
-
-		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="./../static/js/bootstrap.min.js"></script>
-	</body>
-</html>
-
-<!--
-NOTE TO SELF:
-
-INSTALL JQUERY
-Link Jquery
-Try to get comments working
-
--->
+{% endblock %}

@@ -20,7 +20,8 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from communicode.accounts.views import custom_registration_view
 
 urlpatterns = [
-    url(r'^$', 'communicode.dashboard.views.dashboard_view', name='dashboard'),
+    url(r'^$', 'communicode.views.dashboard_view', name='dashboard'),
+    url(r'^project/(?P<project_id>\d+)/', 'communicode.views.project_code_view', name='project_code'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^accounts/login/$', auth_views.login, name='login'),
     url(r'^accounts/register/$', custom_registration_view, name='register'),
