@@ -18,15 +18,11 @@
         {% include 'topbar.html' %}
     {% endblock %}
     {% if messages %}
-    <div class="alert alert-success">
-        {% for message in messages %}
-            {{ message }}<br>
-        {% endfor %}
-    </div>
-
-    <ul class="messages">
-
-    </ul>
+        <div class="alert alert-info">
+            {% for message in messages %}
+                {{ message }}<br>
+            {% endfor %}
+        </div>
     {% endif %}
 
     {% block content %}
