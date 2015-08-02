@@ -112,5 +112,5 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
 
-SECRET_GITLA    B_HOST = os.environ['GITLAB_HOST']
+SECRET_GITLAB_HOST = os.environ['GITLAB_HOST']
 SECRET_GITLAB_TOKEN = os.environ['GITLAB_TOKEN']
