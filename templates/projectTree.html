@@ -14,7 +14,7 @@
 			<div class="thumbnail" style="margin-bottom:0px; padding-left:30px; padding-right:30px; background-color:transparent; border:none;">
 			<div class="page-header" style="margin-top:0px;">
 						<h3>
-							Project Tree
+							{{ project.name }} - Project Tree
 						</h3>
 					</div>
 				</div>
@@ -30,7 +30,8 @@
                 </span>
 			<button 	id="commit" class="btn btn-primary gardient4" onclick="commit()" style="border:none;" role="button" href="#"> commit </button>
 			<button 	id="commit" class="btn btn-primary gardient4" onclick="merge()" style="border:none;" role="button" href="#"> merge </button>
-			
+			<button 	id="commit" class="btn btn-primary gardient4" onclick="window.location.href='{% url 'project_code' project_id=project_id %}'" style="border:none;" role="button"> see project code </button>
+
 			<canvas id="gitGraph"></canvas>
 					  
 			</div>

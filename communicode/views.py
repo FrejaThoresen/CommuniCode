@@ -39,7 +39,12 @@ class ProjectTreeView(TemplateView):
         if not project:
             raise Http404
         context['project'] = project
-        context['last_commit'] = wrappers.get_commit(project_id, 'master')
         return context
 
 project_tree_view = ProjectTreeView.as_view()
+
+
+class ProfilePageView(TemplateView):
+    template_name = 'profilpage.html'
+
+profile_page_view = ProfilePageView.as_view()
