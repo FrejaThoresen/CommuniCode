@@ -17,12 +17,13 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from communicode.accounts.views import custom_registration_view
 
 urlpatterns = [
-    url(r'^$', 'communicode.dashboard.views.dashboard_view'),
+    url(r'^$', 'communicode.dashboard.views.dashboard_view', name='dashboard'),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^accounts/', include('registration.backends.simple.urls')),
-    url(r'^accounts/login/$', auth_views.login, name='login')
+    url(r'^accounts/login/$', auth_views.login, name='login'),
+    url(r'^accounts/register/$', custom_registration_view, name='register'),
 ]
 urlpatterns += staticfiles_urlpatterns()
 # urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

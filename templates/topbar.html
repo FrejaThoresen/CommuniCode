@@ -24,12 +24,14 @@
         </form>
         <ul class="nav navbar-nav navbar-right" style="padding-top:7px; margin-right:20px;">
             <li>
-                <button onclick="window.location.href='{% url 'registration_register' %}'" class="btn btn-danger">
+                {% if not user.is_authenticated %}
+                <button onclick="window.location.href='{% url 'register' %}'" class="btn btn-danger">
                     Sign Up!
                 </button>
                 <button onclick="window.location.href='{% url 'login' %}'" class="btn btn-warning">
                     Sign In!
                 </button>
+                {% endif %}
             </li>
         </ul>
     </div>

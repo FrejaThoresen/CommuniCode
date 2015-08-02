@@ -44,6 +44,7 @@ INSTALLED_APPS = (
 
     'communicode.dashboard',
     'communicode.users',
+    'communicode.accounts',
 )
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
