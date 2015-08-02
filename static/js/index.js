@@ -28,7 +28,7 @@ var myTemplate = new GitGraph.Template( myTemplateConfig );
 
 var config = {
   template: "metro"       // could be: "blackarrow" or "metro" or myTemplate (custom Template object)
-  //, mode: "compact"     // special compact mode : hide messages & compact graph
+  , mode: "compact"     // special compact mode : hide messages & compact graph
 };
 var gitGraph = new GitGraph( config );
 
@@ -46,7 +46,7 @@ master.commit( "Youhou \\o/" );
 
 function commit(){
   dev.commit( "Initial commit" );
- 
+
 }
 
 function branch(){
